@@ -1,36 +1,39 @@
 <?php
-$dadosSite =[
+$dadosSite = [
     "nomeEmpresa" => "Tio Naná & Tia Márcia",
     "slogan" => "Transporte Escolar",
     "whatsapp" => "5511971321186",
     "telefone" => "(11) 97132-1186",
-    
-    "seo" =>[
+
+    "seo" => [
         "palavras" => "transporte escolar, van escolar, condução escolar, segurança",
         "descricao" => "Serviço seguro e confiável de transporte escolar com Tio Naná e Tia Márcia. Mais de 12 anos cuidando do trajeto de alunos."
     ],
 
-    "hero" =>[
+    "hero" => [
         "tag" => "Segurança em primeiro lugar",
         "titulo" => "Transporte Escolar Seguro e Confiável",
         "texto" => "Levamos alunos para a escola com segurança, responsabilidade e pontualidade. Tranquilidade para os pais e conforto para as crianças."
     ],
 
-    "sobre" =>[
+    "sobre" => [
         "titulo" => "Mais do que transporte, entregamos confiança",
         "texto1" => "Com mais de 12 anos de experiência, atuamos com compromisso diário com o bem-estar dos alunos.",
         "texto2" => "Veículos sempre revisados, higienizados e equipados, garantindo conforto em cada trajeto."
     ],
 
-    "servicos" => [[
+    "servicos" => [
+        [
             "icone" => "ph-clock",
             "titulo" => "Transporte Diário",
             "texto" => "Ida e volta para escolas e creches com horários organizados e rotas bem planejadas."
-        ],[
+        ],
+        [
             "icone" => "ph-heartbeat",
             "titulo" => "Cuidado Individualizado",
             "texto" => "Acompanhamos cada aluno com atenção, garantindo embarque e desembarque seguros."
-        ],[
+        ],
+        [
             "icone" => "ph-shield-check",
             "titulo" => "Veículos Equipados",
             "texto" => "Revisões periódicas e normas de segurança seguidas à risca para total conforto."
@@ -40,20 +43,22 @@ $dadosSite =[
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR" style="scroll-behavior: smooth;">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $dadosSite['nomeEmpresa']; ?> | <?php echo $dadosSite['slogan']; ?></title>
-    
+
     <meta name="description" content="<?php echo $dadosSite['seo']['descricao']; ?>">
     <meta name="keywords" content="<?php echo $dadosSite['seo']['palavras']; ?>">
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body class="bg-fundo">
 
     <nav class="navbar navbar-expand-lg fixed-top bg-white shadow-sm" id="menu-principal">
@@ -68,7 +73,8 @@ $dadosSite =[
                 </div>
             </a>
 
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#menuMobile">
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#menuMobile">
                 <i class="ph ph-list fs-2 texto-azul"></i>
             </button>
 
@@ -78,7 +84,8 @@ $dadosSite =[
                     <li class="nav-item"><a class="nav-link fw-medium" href="#servicos">Serviços</a></li>
                     <li class="nav-item"><a class="nav-link fw-medium" href="#contato">Contato</a></li>
                     <li class="nav-item">
-                        <a href="https://wa.me/<?php echo $dadosSite['whatsapp']; ?>" target="_blank" class="btn-azul px-4 py-2 rounded-pill">
+                        <a href="https://wa.me/<?php echo $dadosSite['whatsapp']; ?>" target="_blank"
+                            class="btn-azul px-4 py-2 rounded-pill">
                             Fale Conosco
                         </a>
                     </li>
@@ -96,8 +103,9 @@ $dadosSite =[
                     </span>
                     <h1 class="display-4 fw-bold mb-4"><?php echo $dadosSite['hero']['titulo']; ?></h1>
                     <p class="fs-5 mb-5 opacity-75"><?php echo $dadosSite['hero']['texto']; ?></p>
-                    
-                    <a href="https://wa.me/<?php echo $dadosSite['whatsapp']; ?>" target="_blank" class="btn-amarelo px-5 py-3 rounded-pill fs-5 d-inline-flex align-items-center gap-2">
+
+                    <a href="https://wa.me/<?php echo $dadosSite['whatsapp']; ?>" target="_blank"
+                        class="btn-amarelo px-5 py-3 rounded-pill fs-5 d-inline-flex align-items-center gap-2">
                         <i class="ph-fill ph-whatsapp-logo fs-3"></i> Chamar no WhatsApp
                     </a>
                 </div>
@@ -109,7 +117,8 @@ $dadosSite =[
         <div class="container py-5">
             <div class="row align-items-center gap-5 gap-lg-0">
                 <div class="col-lg-6 position-relative">
-                    <img src="assets/media/image/transpor.jpg" alt="Van Escolar" class="img-fluid rounded-4 shadow-lg w-100 object-fit-cover" style="height: 400px;">
+                    <img src="assets/media/image/transpor.jpg" alt="Van Escolar"
+                        class="img-fluid rounded-4 shadow-lg w-100 object-fit-cover" style="height: 400px;">
                     <div class="selo-anos">
                         <span class="fs-1 fw-bold d-block lh-1">12</span>
                         <span class="small text-uppercase fw-bold">Anos</span>
@@ -130,18 +139,18 @@ $dadosSite =[
                 <h2 class="fw-bold texto-azul">Nossos Serviços</h2>
                 <div class="linha-amarela mx-auto mt-2"></div>
             </div>
-            
+
             <div class="row g-4">
                 <?php foreach ($dadosSite['servicos'] as $servico): ?>
-                <div class="col-md-4">
-                    <div class="card-servico">
-                        <div class="icone-box mb-4">
-                            <i class="ph-fill <?php echo $servico['icone']; ?> fs-1"></i>
+                    <div class="col-md-4">
+                        <div class="card-servico">
+                            <div class="icone-box mb-4">
+                                <i class="ph-fill <?php echo $servico['icone']; ?> fs-1"></i>
+                            </div>
+                            <h3 class="h5 fw-bold texto-azul mb-3"><?php echo $servico['titulo']; ?></h3>
+                            <p class="texto-cinza mb-0"><?php echo $servico['texto']; ?></p>
                         </div>
-                        <h3 class="h5 fw-bold texto-azul mb-3"><?php echo $servico['titulo']; ?></h3>
-                        <p class="texto-cinza mb-0"><?php echo $servico['texto']; ?></p>
                     </div>
-                </div>
                 <?php endforeach; ?>
             </div>
         </div>
@@ -153,25 +162,27 @@ $dadosSite =[
                 <h2 class="fw-bold texto-azul">Fale Conosco</h2>
                 <p class="texto-cinza">Tire suas dúvidas ou garanta a vaga do seu filho.</p>
             </div>
-            
+
             <div class="row g-4 justify-content-center">
                 <div class="col-md-4">
                     <div class="card-contato text-center">
                         <i class="ph-fill ph-phone fs-1 texto-azul mb-3"></i>
                         <h4 class="h5 fw-bold">Ligação</h4>
                         <p class="texto-cinza mb-3">Fale direto com a gente</p>
-                        <a href="tel:<?php echo $dadosSite['whatsapp']; ?>" class="fw-bold fs-5 text-decoration-none texto-azul">
+                        <a href="tel:<?php echo $dadosSite['whatsapp']; ?>"
+                            class="fw-bold fs-5 text-decoration-none texto-azul">
                             <?php echo $dadosSite['telefone']; ?>
                         </a>
                     </div>
                 </div>
 
                 <div class="col-md-4">
-                    <div class="card-contato text-center text-white shadow-lg" style="background-color: #1e3a8a; transform: translateY(-10px);">
+                    <div class="card-contato card-whatsapp-premium text-center text-white shadow-lg">
                         <i class="ph-fill ph-whatsapp-logo fs-1 texto-amarelo mb-3"></i>
                         <h4 class="h5 fw-bold text-white">WhatsApp</h4>
                         <p class="opacity-75 mb-4 text-white">Atendimento rápido</p>
-                        <a href="https://wa.me/<?php echo $dadosSite['whatsapp']; ?>" target="_blank" class="btn-amarelo d-block w-100 py-3 rounded-3">
+                        <a href="https://wa.me/<?php echo $dadosSite['whatsapp']; ?>" target="_blank"
+                            class="btn btn-primary d-block w-100 py-3 rounded-3 fw-bold text-uppercase border-0">
                             Enviar Mensagem
                         </a>
                     </div>
@@ -200,4 +211,5 @@ $dadosSite =[
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
+
 </html>
